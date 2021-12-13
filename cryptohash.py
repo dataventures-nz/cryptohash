@@ -20,9 +20,8 @@ def encrypt_value(value, key):
     """
     We need to hash them in a consistent way so they can be used as a surrogate 
     key in joins within our model. 
-    the reason we are so specific in the encryption, is so we can replicate it in other languages.
-    It is because of this we don't use the standard hashing libraries, since it is hard to get the python hashing library
-    the Java / R / c / Rust / Julia hashing libraries to output the exact same values unless you take this degree on control.
+    The reason we are so specific in the encryption, is so we can replicate it in other languages.
+    We are likely to replace part of this with the standard crypto hashing libraries once we have the test in place for different languages.
 
     Parameters
     ----------
